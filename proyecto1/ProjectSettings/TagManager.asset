@@ -2,8 +2,10 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
-  tags: []
+  serializedVersion: 3
+  tags:
+  - Meta
+  - trampolin
   layers:
   - Default
   - TransparentFX
@@ -11,8 +13,8 @@ TagManager:
   - 
   - Water
   - UI
-  - 
-  - 
+  - Plataformas
+  - Enemigos
   - 
   - 
   - 
@@ -38,6 +40,23 @@ TagManager:
   - 
   - 
   m_SortingLayers:
+  - name: fondo
+    uniqueID: 1470511479
+    locked: 0
+  - name: fondouno
+    uniqueID: 1439967783
+    locked: 0
+  - name: Mapa
+    uniqueID: 1557232827
+    locked: 0
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Frente
+    uniqueID: 4103570717
+    locked: 0
+  - name: ui
+    uniqueID: 640679909
+    locked: 0
+  m_RenderingLayers:
+  - Default
