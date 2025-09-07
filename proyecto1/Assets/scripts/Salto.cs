@@ -50,8 +50,8 @@ public class Saltar : MonoBehaviour
     {
         if (collision.gameObject.CompareTag("trampolin"))
         {
-            puedoSaltar = false;
-            saltando = true;
+            puedoSaltar = true;
+            saltando = false;
         }
     }
 

@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 7f9154fb961d72b4f9c2fb83f8e69866
+guid: c26db3741153fee43a54a81734b7fadb
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -37,9 +37,9 @@ TextureImporter:
     filterMode: 0
     aniso: 1
     mipBias: 0
-    wrapU: 1
-    wrapV: 1
-    wrapW: 1
+    wrapU: 0
+    wrapV: 0
+    wrapW: 0
   nPOTScale: 0
   lightmap: 0
   compressionQuality: 50
@@ -113,10 +113,10 @@ TextureImporter:
       name: tile_0000_0
       rect:
         serializedVersion: 2
-        x: 5
-        y: 3
-        width: 22
-        height: 25
+        x: 2
+        y: 2
+        width: 28
+        height: 28
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -135,7 +135,7 @@ TextureImporter:
     customData: 
     physicsShape: []
     bones: []
-    spriteID: 061be9801c450fb4f816a754b528de97
+    spriteID: 1a9c85568212b4a45a0d057b532b3e16
     internalID: 0
     vertices: []
     indices: 
