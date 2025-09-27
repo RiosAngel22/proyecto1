@@ -2,10 +2,7 @@ using UnityEngine;
 
 public class Saltar : MonoBehaviour
 {
-
-    // Variables a configurar desde el editor
-    [Header("Configuracion")]
-    [SerializeField] private float fuerzaSalto = 5f;
+    private jugador jugador;
 
     // Variables de uso interno en el script
     private bool puedoSaltar = true;
@@ -13,6 +10,11 @@ public class Saltar : MonoBehaviour
 
     // Variable para referenciar otro componente del objeto
     private Rigidbody2D miRigidbody2D;
+
+    private void Awake()
+    {
+        jugador = GetComponent<jugador>();
+    }
 
     // Codigo ejecutado cuando el objeto se activa en el nivel
     private void OnEnable()
@@ -33,7 +35,7 @@ public class Saltar : MonoBehaviour
     {
         if (!puedoSaltar && !saltando)
         {
-            miRigidbody2D.AddForce(Vector2.up * fuerzaSalto, ForceMode2D.Impulse);
+            miRigidbody2D.AddForce(Vector2.up * jugador.PerfilJugador.FuerzaSalto, ForceMode2D.Impulse);
             saltando = true;
         }
     }

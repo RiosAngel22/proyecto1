@@ -62,7 +62,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 2378986476245406267, guid: 06611f4e6cd6f7f44a7339cf3b0b02d3, type: 3}
       propertyPath: puntos
-      value: 5
+      value: 2
       objectReference: {fileID: 0}
     - target: {fileID: 6998023790014781823, guid: 06611f4e6cd6f7f44a7339cf3b0b02d3, type: 3}
       propertyPath: m_Sprite

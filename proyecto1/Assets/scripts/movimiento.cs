@@ -2,9 +2,8 @@ using UnityEngine;
 
 public class Mover : MonoBehaviour
 {
-    // Variables a configurar desde el editor
-    [Header("Configuracion")]
-    [SerializeField] float velocidad = 5f;
+
+    private jugador jugador;
 
     // Variables de uso interno en el script
     private float moverHorizontal;
@@ -14,6 +13,11 @@ public class Mover : MonoBehaviour
     private Rigidbody2D miRigidbody2D;
 
     private SpriteRenderer miSprite;
+
+    private void Awake()
+    {
+        jugador = GetComponent<jugador>();
+    }
 
     // Codigo ejecutado cuando el objeto se activa en el nivel
     private void OnEnable()
@@ -42,6 +46,6 @@ public class Mover : MonoBehaviour
     private void FixedUpdate()
     {
 
-        miRigidbody2D.AddForce(direccion * velocidad);
+        miRigidbody2D.AddForce(direccion * jugador.PerfilJugador.Velocidad);
     }
 }
