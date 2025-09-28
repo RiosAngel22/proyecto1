@@ -5,15 +5,15 @@ using UnityEngine;
 public class PerfilJugador : ScriptableObject
 {
     [SerializeField] private int vida = 5;
-    public int Vida { get => vida; set => vida = value; }
+    public int Vida { get => vida; }
 
 
     //movimiento
     [SerializeField] float velocidad = 5f;
-    public float Velocidad { get => velocidad; set => velocidad = value; }
+    public float Velocidad { get => velocidad;}
 
     [SerializeField] private float fuerzaSalto = 5f;
-    public float FuerzaSalto { get => fuerzaSalto; set => fuerzaSalto = value; }
+    public float FuerzaSalto { get => fuerzaSalto;}
     //movimiento
 
     //nivelar

@@ -15,5 +15,5 @@ MonoBehaviour:
   vida: 5
   velocidad: 15
   fuerzaSalto: 10
-  experienciaProximoNivel: 30
+  experienciaProximoNivel: 50
   escalarExperiencia: 20

@@ -11,20 +11,18 @@ public class jugador : MonoBehaviour
     [SerializeField] PerfilJugador perfilJugador;
     public PerfilJugador PerfilJugador { get => perfilJugador; set => perfilJugador = value; }
 
+    private int vida;
+
     [Header("Configuracion")]
     [SerializeField] private UnityEvent<int> onLifeChanged;
     [SerializeField] private UnityEvent<string> onTextChanged;
 
 
-    private void OnEnable()
+    private void Awake()
     {
-        onLifeChanged.Invoke(perfilJugador.Vida);
-        onTextChanged.Invoke(perfilJugador.Vida.ToString());
-    }
-    
-    public void OnClick()
-    {
-        SceneManager.LoadScene("Escena1");
+        vida = perfilJugador.Vida;
+        onLifeChanged.Invoke(vida);
+        onTextChanged.Invoke(GameManager.instance.getScore().ToString());
     }
 
     private bool vivo()
@@ -34,15 +32,16 @@ public class jugador : MonoBehaviour
 
     public void ModificarVida(int puntos)
     {
-        perfilJugador.Vida += puntos;
-        onLifeChanged.Invoke(perfilJugador.Vida);
-        onTextChanged.Invoke(perfilJugador.Vida.ToString());
+        vida += puntos;
+        GameManager.instance.AddScore(puntos * 100);
+        onLifeChanged.Invoke(vida);
+        onTextChanged.Invoke(GameManager.instance.getScore().ToString());
     }
 
     private void OnTriggerEnter2D(Collider2D colision)
     {
 
-        if (!colision.gameObject.CompareTag("Meta")) { return; }
+        if ((!colision.gameObject.CompareTag("Meta")) || !vivo()) { return; }
 
         Debug.Log("victoria");
     }

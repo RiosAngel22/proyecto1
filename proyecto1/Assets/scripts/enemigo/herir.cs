@@ -13,6 +13,7 @@ public class Herir : MonoBehaviour
         {
             jugador Jugador = collision.gameObject.GetComponent<jugador>();
             Jugador.ModificarVida(-puntos);
+            gameObject.SetActive(false);
         }
     }
 }
