@@ -25,7 +25,7 @@ public class GameManager : MonoBehaviour
     {
         score += puntos;
 
-        if (score < 500) {
+        if (score < 600) {
             AplicationManager.instance.IrAEscenaAnterior();
             resetScore();
         }

@@ -21,8 +21,6 @@ public class jugador : MonoBehaviour
     private void Awake()
     {
         vida = perfilJugador.Vida;
-        onLifeChanged.Invoke(vida);
-        onTextChanged.Invoke(GameManager.instance.getScore().ToString());
     }
 
     private bool vivo()

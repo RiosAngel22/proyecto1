@@ -4,20 +4,23 @@ using UnityEngine;
 
 public class ObjectPool : MonoBehaviour
 {
-    [SerializeField] private GameObject objectPool;
+    [SerializeField] private GameObject[] objectPool;
     [SerializeField] private int poolsize = 5;
 
     private List<GameObject> pooledObjects;
+
+    public int Poolsize { get => poolsize;}
 
     private void Start()
     {
         pooledObjects = new List<GameObject>();
 
         for (int i = 0; i < poolsize; i++) {
-            GameObject obj = Instantiate(objectPool);
+            //si nuestra piscina tiene mas de un solo objeto, usamos un index random, si es uno solo el index no sera problema
+            int r = Random.Range(0, objectPool.Length);
+            GameObject obj = Instantiate(objectPool[r]);
             obj.SetActive(false);
             pooledObjects.Add(obj);
-
         }
     }
 

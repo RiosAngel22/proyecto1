@@ -30,4 +30,14 @@ public class GeneradorBalas : MonoBehaviour
             pooledObject.SetActive(true);
         }
     }
+
+    private void OnBecameInvisible()
+    {
+        CancelInvoke(nameof(generarObjetoLoop));
+    }
+
+    private void OnBecameVisible()
+    {
+        InvokeRepeating(nameof(generarObjetoLoop), TiempoDeEspera, tiempoIntervalo);
+    }
 }

@@ -1,3 +1,4 @@
+using Unity.VisualScripting;
 using UnityEngine;
 
 public class Proyectil : MonoBehaviour
@@ -20,5 +21,11 @@ public class Proyectil : MonoBehaviour
     {
         Vector2 direccion = Vector2.left;
         rb.linearVelocity = direccion * velocidad;
+    }
+
+    private void OnBecameInvisible()
+    {
+        //al salir de la pantalla lo desactivamos
+        this.gameObject.SetActive(false);
     }
 }
